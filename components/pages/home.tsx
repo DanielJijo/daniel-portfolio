@@ -4,7 +4,34 @@ import { motion } from "framer-motion"
 import { ArrowRight, Download, Github, Linkedin, Code, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ContainerScroll } from "@/components/ui/container-scroll-animation"
+import { Dock, DockIcon } from "@/components/ui/dock"
+
+function SocialDock() {
+  return (
+    <Dock>
+      <DockIcon>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <Github className="h-8 w-8" />
+        </a>
+      </DockIcon>
+      <DockIcon>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <Linkedin className="h-8 w-8" />
+        </a>
+      </DockIcon>
+      <DockIcon>
+        <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer">
+          <Code className="h-8 w-8" />
+        </a>
+      </DockIcon>
+      <DockIcon>
+        <a href="https://codolio.com" target="_blank" rel="noopener noreferrer">
+          <ExternalLink className="h-8 w-8" />
+        </a>
+      </DockIcon>
+    </Dock>
+  )
+}
 
 export default function Home() {
   const socialLinks = [
@@ -93,29 +120,7 @@ export default function Home() {
             </motion.div>
 
             {/* Social Links */}
-            <motion.div
-              className="flex justify-center space-x-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-gray-600 dark:text-gray-400 transition-colors duration-200 ${social.color}`}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                >
-                  <social.icon className="h-6 w-6" />
-                </motion.a>
-              ))}
-            </motion.div>
+            {/* Remove the old socialLinks icon bar (motion.div with flex justify-center space-x-6) */}
           </motion.div>
         </div>
       </section>
@@ -163,17 +168,6 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
-
-      {/* Container Scroll Animation Demo */}
-      <section className="py-20">
-        <ContainerScroll
-          titleComponent={<h2 className="text-3xl font-bold text-center mb-8">Scroll Animation Demo</h2>}
-        >
-          <div className="flex items-center justify-center h-full">
-            <p className="text-xl text-center">Your animated content goes here!</p>
-          </div>
-        </ContainerScroll>
       </section>
     </div>
   )
