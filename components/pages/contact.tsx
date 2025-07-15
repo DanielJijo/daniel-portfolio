@@ -86,84 +86,8 @@ export default function Contact() {
       {/* Contact Form and Info */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <Card className="shadow-xl">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-gray-900 dark:text-white">Send me a message</CardTitle>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    I'd love to hear from you. Fill out the form below and I'll get back to you as soon as possible.
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Name
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Your full name"
-                        className="w-full"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                      >
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="your.email@example.com"
-                        className="w-full"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                      >
-                        Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        required
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Tell me about your project or just say hello..."
-                        rows={6}
-                        className="w-full"
-                      />
-                    </div>
-                    <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                      <Send className="mr-2 h-5 w-5" />
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Contact Info */}
+          <div className="flex justify-center">
+            {/* Contact Info Only (form removed) */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -178,7 +102,6 @@ export default function Contact() {
                     opportunities and interesting projects.
                   </p>
                 </div>
-
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <motion.div
@@ -209,7 +132,6 @@ export default function Contact() {
                     </motion.div>
                   ))}
                 </div>
-
                 {/* Social Links */}
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Connect with me</h3>
@@ -238,39 +160,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      {/* Map Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">My Location</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">Based in Coimbatore, Tamil Nadu, India</p>
-          </motion.div>
-
-          <motion.div
-            className="rounded-2xl overflow-hidden shadow-xl"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-500 dark:text-gray-400">Interactive map would be embedded here</p>
-                <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">Coimbatore, Tamil Nadu, India</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -287,9 +176,11 @@ export default function Contact() {
               Whether you have a project in mind, want to collaborate, or just want to say hello, I'm always excited to
               connect with fellow developers and innovators.
             </p>
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-              <Mail className="mr-2 h-5 w-5" />
-              Start a Conversation
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3" asChild>
+              <a href="https://wa.me/917539969460?text=Yo%20Joe%20Dev%20%F0%9F%91%8B%20Got%20a%20minute%3F%20I%E2%80%99ve%20got%20something%20in%20mind." target="_blank" rel="noopener noreferrer">
+                <Mail className="mr-2 h-5 w-5" />
+                Start a Conversation
+              </a>
             </Button>
           </motion.div>
         </div>

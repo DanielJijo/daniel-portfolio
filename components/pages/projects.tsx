@@ -9,48 +9,58 @@ import { Badge } from "@/components/ui/badge"
 export default function Projects() {
   const projects = [
     {
-      title: "Netflix Clone",
+      title: "F1 Xperience",
       description:
-        "A responsive streaming UI built with React and styled-components, featuring movie browsing, search functionality, and a modern interface that mimics the Netflix experience.",
-      image: "/placeholder.svg?height=400&width=600",
-      tech: ["React.js", "Styled Components", "JavaScript", "Responsive Design"],
-      github: "https://github.com",
-      live: "https://netflix-clone-demo.com",
-      icon: <Smartphone className="h-6 w-6" />,
-      gradient: "from-red-500 to-pink-500",
+        "An immersive Formula 1-themed web app that brings the thrill of the racetrack to life through sleek UI, race data visualizations, and responsive design. Features include team overviews, driver stats, race timelines, and interactive charts, all crafted for motorsport fans.",
+      image: "/f1-xperience.jpg",
+      tech: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "TypeScript",
+        "Framer Motion",
+        "Radix UI",
+        "Recharts",
+        "Zod",
+        "GSAP"
+      ],
+      github: "#",
+      live: "http://f1-x.vercel.app/",
+      icon: <Globe className="h-6 w-6" />, 
+      gradient: "from-blue-500 to-purple-500",
     },
     {
-      title: "HabitSync",
-      description:
-        "A full-stack daily habit tracker web application that helps users build and maintain positive habits with progress tracking, streak counters, and motivational insights.",
-      image: "/placeholder.svg?height=400&width=600",
-      tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Chart.js"],
-      github: "https://github.com",
-      live: "https://habitsync-demo.com",
-      icon: <Code className="h-6 w-6" />,
-      gradient: "from-green-500 to-teal-500",
-    },
-    {
-      title: "Teena Makeovers",
+      title: "Makeover Portfolio",
       description:
         "A modern and elegant portfolio website showcasing beauty services, bridal makeovers, and professional expertise with stunning galleries and booking functionality.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/makeover-portfolio.jpg",
       tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP"],
       github: "https://github.com",
-      live: "https://teena-makeovers.com",
-      icon: <Palette className="h-6 w-6" />,
+      live: "http://teena-makeovers.vercel.app/",
+      icon: <Palette className="h-6 w-6" />, 
       gradient: "from-purple-500 to-pink-500",
     },
     {
-      title: "Personal Portfolio",
+      title: "Netflix Clone",
       description:
-        "This very website you're viewing! A sleek personal portfolio built with React, featuring smooth animations, dark mode, and responsive design to showcase my work and skills.",
-      image: "/placeholder.svg?height=400&width=600",
-      tech: ["React.js", "Tailwind CSS", "Framer Motion", "React Router"],
+        "A responsive streaming UI built with React and styled-components, featuring movie browsing, search functionality, and a modern interface that mimics the Netflix experience.",
+      image: "/netflix-clone.jpg",
+      tech: ["React.js", "Styled Components", "JavaScript", "Responsive Design"],
       github: "https://github.com",
-      live: "https://daniel-portfolio.com",
-      icon: <Globe className="h-6 w-6" />,
-      gradient: "from-blue-500 to-purple-500",
+      live: "https://netflix-clone-live.vercel.app/",
+      icon: <Smartphone className="h-6 w-6" />, 
+      gradient: "from-red-500 to-pink-500",
+    },
+    {
+      title: "Habit Tracker",
+      description:
+        "A full-stack daily habit tracker web application that helps users build and maintain positive habits with progress tracking, streak counters, and motivational insights.",
+      image: "/habit-tracker.jpg",
+      tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Chart.js"],
+      github: "https://github.com",
+      live: "https://habitsync-gold.vercel.app/",
+      icon: <Code className="h-6 w-6" />, 
+      gradient: "from-green-500 to-teal-500",
     },
   ]
 
@@ -130,9 +140,7 @@ export default function Projects() {
                     </div>
                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">{project.title}</h2>
                   </div>
-
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{project.description}</p>
-
                   <div className="flex flex-wrap gap-2 mb-8">
                     {project.tech.map((tech) => (
                       <Badge key={tech} variant="secondary" className="px-3 py-1">
@@ -140,7 +148,6 @@ export default function Projects() {
                       </Badge>
                     ))}
                   </div>
-
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button
                       size="lg"
@@ -165,7 +172,6 @@ export default function Projects() {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 lg:py-32 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

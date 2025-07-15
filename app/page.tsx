@@ -10,7 +10,6 @@ import Skills from "@/components/pages/skills"
 import Projects from "@/components/pages/projects"
 import Experience from "@/components/pages/experience"
 import Contact from "@/components/pages/contact"
-import Footer from "@/components/footer"
 
 export default function App() {
   const [mounted, setMounted] = useState(false)
@@ -42,7 +41,6 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
-          <Footer />
         </div>
       </Router>
     </ThemeProvider>

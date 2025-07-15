@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Download, Users, Lightbulb, MessageCircle, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import TiltedCard from "@/components/TiltedCard/TiltedCard";
 
 export default function About() {
   const languages = [
@@ -67,9 +68,19 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-3xl flex items-center justify-center">
-                <div className="text-8xl">👨‍🎓</div>
-              </div>
+              <TiltedCard
+                imageSrc="/daniel-profile.jpg"
+                altText="Joe Dev"
+                captionText="JOE DEV"
+                containerHeight="400px"
+                containerWidth="400px"
+                imageHeight="400px"
+                imageWidth="400px"
+                scaleOnHover={1.08}
+                rotateAmplitude={12}
+                captionClassName="text-xl font-bold px-6 py-2"
+                imageGlowClassName="transition-shadow duration-300 group-hover:shadow-[0_0_80px_24px_rgba(0,0,0,0.95)]"
+              />
             </motion.div>
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">Daniel Jijo P.P</h2>
