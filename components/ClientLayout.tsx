@@ -8,6 +8,7 @@ import ClickRipple from "@/components/ClickRipple";
 import PageTransition from "@/components/PageTransition";
 import { useEffect, useState } from "react";
 import "@/app/globals.css";
+import { ReactLenis } from "lenis/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,16 +50,18 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <ClickRipple />
         <PageTransition show={showTransition} />
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-          <TubelightNavbar />
-          <main>{children}</main>
-          <Footer />
-          <div className="fixed left-0 right-0 bottom-20 z-50 flex justify-center pointer-events-none">
-            <div className="pointer-events-auto">
-              <SocialDock />
+        <ReactLenis root>
+          <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+            <TubelightNavbar />
+            <main>{children}</main>
+            <Footer />
+            <div className="fixed left-0 right-0 bottom-20 z-50 flex justify-center pointer-events-none">
+              <div className="pointer-events-auto">
+                <SocialDock />
+              </div>
             </div>
           </div>
-        </div>
+        </ReactLenis>
       </ThemeProvider>
     </div>
   );

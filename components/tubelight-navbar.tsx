@@ -59,7 +59,7 @@ export default function TubelightNavbar() {
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white">
-          Daniel
+          it's JOE
         </Link>
 
         {/* Tubelight Navigation */}

@@ -48,7 +48,7 @@ export default function Projects() {
       tech: ["React.js", "Styled Components", "JavaScript", "Responsive Design"],
       github: "https://github.com",
       live: "https://netflix-clone-live.vercel.app/",
-      icon: <Smartphone className="h-6 w-6" />, 
+      icon: <Smartphone className="h-6 w-6" />,
       gradient: "from-red-500 to-pink-500",
     },
     {
@@ -59,7 +59,7 @@ export default function Projects() {
       tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Chart.js"],
       github: "https://github.com",
       live: "https://habitsync-gold.vercel.app/",
-      icon: <Code className="h-6 w-6" />, 
+      icon: <Code className="h-6 w-6" />,
       gradient: "from-green-500 to-teal-500",
     },
   ]

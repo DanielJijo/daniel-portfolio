@@ -80,7 +80,7 @@ export default function About() {
                 rotateAmplitude={12}
                 captionClassName="text-xl font-bold px-6 py-2"
                 imageGlowClassName="transition-shadow duration-300 group-hover:shadow-[0_0_80px_24px_rgba(0,0,0,0.95)]"
-              />
+                />
             </motion.div>
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">Daniel Jijo P.P</h2>

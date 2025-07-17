@@ -10,6 +10,7 @@ import Skills from "@/components/pages/skills"
 import Projects from "@/components/pages/projects"
 import Experience from "@/components/pages/experience"
 import Contact from "@/components/pages/contact"
+import ScrollDemo from "@/components/pages/scroll-demo";
 
 export default function App() {
   const [mounted, setMounted] = useState(false)
@@ -39,6 +40,7 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/scroll-demo" element={<ScrollDemo />} />
             </Routes>
           </main>
         </div>

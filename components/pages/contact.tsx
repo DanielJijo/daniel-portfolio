@@ -178,8 +178,8 @@ export default function Contact() {
             </p>
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3" asChild>
               <a href="https://wa.me/917539969460?text=Yo%20Joe%20Dev%20%F0%9F%91%8B%20Got%20a%20minute%3F%20I%E2%80%99ve%20got%20something%20in%20mind." target="_blank" rel="noopener noreferrer">
-                <Mail className="mr-2 h-5 w-5" />
-                Start a Conversation
+              <Mail className="mr-2 h-5 w-5" />
+              Start a Conversation
               </a>
             </Button>
           </motion.div>

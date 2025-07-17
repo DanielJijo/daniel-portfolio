@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Daniel Jijo P.P - Portfolio",
   description:
-    "Personal portfolio of Daniel Jijo P.P, Computer Science Engineering student and aspiring Full Stack Developer",
+    "Personal portfolio of Daniel Jijo P.P, Computer Science Engineering student and Next-Gen Developer",
     generator: 'v0.dev'
 }
 

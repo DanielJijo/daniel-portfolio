@@ -34,8 +34,7 @@ export default function Footer() {
           >
             <h3 className="text-2xl font-bold mb-4">Daniel Jijo P.P</h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Aspiring Full Stack Developer passionate about creating innovative solutions and building the future
-              through code.
+              Next-Gen Developer passionate about creating innovative solutions and building the future
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
