@@ -178,7 +178,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <CircularText text="DANIEL*JIJO*DEVELOPER*" />
+              <CircularText text="DANIEL*JIJO*DEVELOPER*" className="w-[320px] h-[320px]" />
             </motion.div>
           </motion.div>
         </div>
