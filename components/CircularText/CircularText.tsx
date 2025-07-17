@@ -19,7 +19,7 @@ const getRotationTransition = (
   loop: boolean = true
 ) => ({
   from,
-  to: from + 360,
+  to: from - 360,
   ease: "linear" as const,
   duration,
   type: "tween" as const,
